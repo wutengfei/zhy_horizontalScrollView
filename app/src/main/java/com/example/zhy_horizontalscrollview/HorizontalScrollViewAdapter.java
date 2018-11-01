@@ -50,7 +50,7 @@ public class HorizontalScrollViewAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         viewHolder.mImg.setImageResource(mDatas.get(position));
-        viewHolder.mText.setText("some info ");
+        viewHolder.mText.setText(position+1+"");
 
         return convertView;
     }
