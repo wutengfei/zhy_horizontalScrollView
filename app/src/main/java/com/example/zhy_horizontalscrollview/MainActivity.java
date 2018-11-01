@@ -35,16 +35,19 @@ public class MainActivity extends Activity {
         mHorizontalScrollView = (MyHorizontalScrollView) findViewById(R.id.id_horizontalScrollView);
         mAdapter = new HorizontalScrollViewAdapter(this, mDatas);
         //添加滚动回调
-        mHorizontalScrollView
-                .setCurrentImageChangeListener(new CurrentImageChangeListener() {
-                    @Override
-                    public void onCurrentImgChanged(int position,
-                                                    View viewIndicator) {
-                        mImg.setImageResource(mDatas.get(position));
-                        viewIndicator.setBackgroundColor(Color
-                                .parseColor("#AA024DA4"));
-                    }
-                });
+//        mHorizontalScrollView
+//                .setCurrentImageChangeListener(new CurrentImageChangeListener() {
+//                    @Override
+//                    public void onCurrentImgChanged(int position,
+//                                                    View viewIndicator) {
+//                        mImg.setImageResource(mDatas.get(position));
+//                        viewIndicator.setBackgroundColor(Color
+//                                .parseColor("#AA024DA4"));
+//                    }
+//                });
+
+        mImg.setImageResource(mDatas.get(0));//设置初始图片为第一张
+
         //添加点击回调
         mHorizontalScrollView.setOnItemClickListener(new OnItemClickListener() {
 
